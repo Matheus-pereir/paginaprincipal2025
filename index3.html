@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Média</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eaf6f6;
+      padding: 20px;
+    }
+    .container {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, button {
+      margin-top: 10px;
+      width: 100%;
+      padding: 8px;
+    }
+    .resultado {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Verificador de Notas</h2>
+    <input type="number" id="nota1" placeholder="Nota 1">
+    <input type="number" id="nota2" placeholder="Nota 2">
+    <input type="number" id="nota3" placeholder="Nota 3">
+    <button onclick="calcularMedia()">Verificar Situação</button>
+    <div class="resultado" id="resultado"></div>
+  </div>
+</body>
+</html>

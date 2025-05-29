@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificador de Divisibilidade</title>
+    <title>Verificador de Aceitação</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,14 +23,14 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         .input-group {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         label {
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
         }
-        input {
+        input, select {
             width: 100%;
             padding: 8px;
             border: 1px solid #ddd;
@@ -45,30 +45,48 @@
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
+            width: 100%;
         }
         button:hover {
             background-color: #45a049;
         }
         #result {
             margin-top: 20px;
-            padding: 10px;
+            padding: 15px;
             border-radius: 4px;
             background-color: #f9f9f9;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
         }
-        .message {
-            margin: 5px 0;
-            padding: 5px;
+        .accepted {
+            color: green;
+        }
+        .rejected {
+            color: red;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Verificador de Divisibilidade</h1>
+        <h1>Verificador de Aceitação</h1>
         <div class="input-group">
-            <label for="number">Digite um número:</label>
-            <input type="number" id="number" placeholder="Ex: 6, 7, 9...">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" placeholder="Digite seu nome">
         </div>
-        <button onclick="checkDivisibility()">Verificar</button>
+        <div class="input-group">
+            <label for="sex">Sexo:</label>
+            <select id="sex">
+                <option value="">Selecione</option>
+                <option value="F">Feminino (F)</option>
+                <option value="M">Masculino (M)</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="age">Idade:</label>
+            <input type="number" id="age" placeholder="Digite sua idade" min="0">
+        </div>
+        <button onclick="checkAcceptance()">Verificar</button>
         <div id="result"></div>
     </div>
 
